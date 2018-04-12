@@ -1,9 +1,7 @@
 # -*- coding: utf-8 -*-
 import gzip
 import time
-from StringIO import StringIO
-import xbmc
-import urllib2
+from io import StringIO
 import re
 
 subscene_languages = {

@@ -2,33 +2,27 @@
 
 import os
 import sys
-import xbmc
 import urllib
-import urllib2
-import xbmcvfs
-import xbmcaddon
-import xbmcgui
-import xbmcplugin
 import uuid
 import unicodedata
 import re
 import string
 import difflib
-import HTMLParser
+import html.parser
 from operator import itemgetter
 
 
-__addon__ = xbmcaddon.Addon()
-__author__ = __addon__.getAddonInfo('author')
-__scriptid__ = __addon__.getAddonInfo('id')
-__scriptname__ = __addon__.getAddonInfo('name')
-__version__ = __addon__.getAddonInfo('version')
-__language__ = __addon__.getLocalizedString
+#__addon__ = xbmcaddon.Addon()
+#__author__ = __addon__.getAddonInfo('author')
+#__scriptid__ = __addon__.getAddonInfo('id')
+#__scriptname__ = __addon__.getAddonInfo('name')
+#__version__ = __addon__.getAddonInfo('version')
+#__language__ = __addon__.getLocalizedString
 
-__cwd__ = unicode(xbmc.translatePath(__addon__.getAddonInfo('path')), 'utf-8')
-__profile__ = unicode(xbmc.translatePath(__addon__.getAddonInfo('profile')), 'utf-8')
-__resource__ = unicode(xbmc.translatePath(os.path.join(__cwd__, 'resources', 'lib')), 'utf-8')
-__temp__ = unicode(xbmc.translatePath(os.path.join(__profile__, 'temp', '')), 'utf-8')
+#__cwd__ = unicode(xbmc.translatePath(__addon__.getAddonInfo('path')), 'utf-8')
+#__profile__ = unicode(xbmc.translatePath(__addon__.getAddonInfo('profile')), 'utf-8')
+__resource__ = "resources/lib"
+#__temp__ = unicode(xbmc.translatePath(os.path.join(__profile__, 'temp', '')), 'utf-8')
 
 sys.path.append(__resource__)
 
@@ -70,7 +64,7 @@ try:
     rmtree(__temp__)
 except:
     pass
-xbmcvfs.mkdirs(__temp__)
+#xbmcvfs.mkdirs(__temp__)
 
 
 def find_movie(content, title, year):
