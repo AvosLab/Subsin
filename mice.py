@@ -1,5 +1,7 @@
 import sys
 
+
+# python file.py XXXX action=search
 def get_params():
     param = {}
     paramstring = sys.argv[2]
